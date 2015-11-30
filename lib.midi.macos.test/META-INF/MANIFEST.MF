@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: lib.midi.macos.test;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Import-Package: com.stereokrauts.lib.binary,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.lib.midi.support,
+ com.stereokrauts.lib.midi.util,
+ org.osgi.framework,
+ org.springframework.beans.factory,
+ org.springframework.context,
+ org.springframework.core.io.support
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

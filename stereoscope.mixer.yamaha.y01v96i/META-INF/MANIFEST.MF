@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Yamaha 01v96i
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.mixer.yamaha.y01v96i;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.mixer.yamaha.y01v96i
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.binary;resolution:=optional,
+ com.stereokrauts.lib.logging,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.lib.midi.util,
+ com.stereokrauts.plugin.midibridge,
+ com.stereokrauts.stereoscope.gui.metrics.model,
+ com.stereokrauts.stereoscope.helper.tests;resolution:=optional,
+ com.stereokrauts.stereoscope.mixer.mixer.yamaha.common,
+ com.stereokrauts.stereoscope.mixer.yamaha.genericmidsize,
+ com.stereokrauts.stereoscope.mixer.yamaha.genericmidsize.midi,
+ com.stereokrauts.stereoscope.model.messaging.api,
+ com.stereokrauts.stereoscope.model.messaging.message;resolution:=optional,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs;resolution:=optional,
+ com.stereokrauts.stereoscope.plugin.interfaces,
+ com.stereokrauts.stereoscope.plugin.model,
+ com.stereokrauts.stereoscope.plugin.ui,
+ model.beans,
+ model.mixer.interfaces,
+ org.junit;resolution:=optional

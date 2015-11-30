@@ -1,0 +1,54 @@
+/**
+ * This macro is for one band of the
+ * graphical equalizer. Variables are (besides x and y):
+ * n: number of band (1-31)
+ * m: side of band (left/right)
+ * hz: band frequency
+ */
+{
+	"type": "stdButton",
+	"name": "0dB",
+	"oscMessage": "/stereoscope/stateful/dsp/geq/band/${n}/${m}/reset",
+	"dataType": "boolean",
+	"initValue": false,
+	"coords": {"x": ${x}, "y": ${y}},
+	"width": 40,
+	"height": 40,
+	"color": "red",
+	"visibility": true,
+	"orient": "horizontal",
+	"label": true
+},
+{
+	"type": "thinFader",
+	"name": "EQ Band",
+	"oscMessage": "/stereoscope/stateful/dsp/geq/band/${n}/${m}/level",
+	"dataType": "float",
+	"initValue": 0.0,
+	"coords": {"x": ${x}, "y": ${y + 60}},
+	"width": 40,
+	"height": 270,
+	"color": "orange",
+	"visibility": true,
+	"orient": "horizontal",
+	"mode": "centered",
+	"label": false,
+	"labelOscMessage": "/null"
+},
+{
+	"type": "staticLabel",
+	"name": "EQ Band Label",
+	"oscMessage": "/null",
+	"dataType": "string",
+	"initValue": "${hz}",
+	"coords": {"x": ${x},"y": ${y + 350}},
+	"width": 40,
+	"height": 30,
+	"color": "orange",
+	"visibility": true,
+	"orient": "horizontal",
+	"background": true,
+	"bgColor": "gray",
+	"edge": false,
+	"size": 12
+}

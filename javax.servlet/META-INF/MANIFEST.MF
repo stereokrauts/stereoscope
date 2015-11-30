@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JavaX Servlet
+Bundle-Vendor: Unknown
+Bundle-SymbolicName: javax.servlet
+Bundle-Version: 3.0
+Bundle-ClassPath: javax.servlet-3.0.0.v201112011016.jar
+Export-Package: javax.servlet;version="3.0",
+ javax.servlet.annotation;version="3.0",
+ javax.servlet.descriptor;version="3.0",
+ javax.servlet.http;version="3.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

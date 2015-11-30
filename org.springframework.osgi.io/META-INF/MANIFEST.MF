@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGi I/O
+Bundle-SymbolicName: org.springframework.osgi.io
+Bundle-Version: 1.2.1
+Bundle-Vendor: SpringSource
+Export-Package: org.springframework.osgi.io;version="1.2.1";
+  uses:="org.osgi.framework,
+   org.springframework.core.io,
+   org.springframework.core.io.support,
+   org.springframework.osgi.io.internal.resolver"
+Implementation-Version: 1.2.1
+Spring-DM-Version: 1.2.1
+Import-Package: org.apache.commons.logging;version="[1.0,2.0)",
+ org.osgi.framework;version="1.3",
+ org.osgi.service.packageadmin;version="1.2",
+ org.springframework.core.io;version="[2.5.6,4.0)",
+ org.springframework.core.io.support;version="[2.5.6,4.0)",
+ org.springframework.util;version="[2.5.6,4.0)"
+Built-By: costin
+Bundle-Description: Spring/OSGi IO abstract classes. Provides Resource, ResourceLoader and ResourcePatternResolver for OSGi environments.
+Spring-Version: 2.5.6.SEC01
+Implementation-Vendor-Id: org.springframework.osgi
+Bundle-DocURL: http://www.springframework.org/osgi
+Bundle-Classpath: org.springframework.osgi.io-1.2.1.jar
+Implementation-Vendor: SpringSource
+Implementation-Title: Spring Dynamic Modules Framework
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
+Build-Jdk: 1.5.0_22
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

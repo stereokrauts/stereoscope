@@ -1,0 +1,14 @@
+{
+	"type": "stdToggleButton",
+	"name": "Aux ${n}",
+	"oscMessage": "/stereoscope/system/state/selectedAux/changeTo/${n}",
+	"dataType": "boolean",
+	"initValue": false,
+	"coords": {"x": ${x}, "y": ${y}},
+	"width": 40,
+	"height": 40,
+	"color": "green",
+	"visibility": true,
+	"orient": "horizontal",
+	"label": true
+}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereokrauts Property Library
+Bundle-SymbolicName: lib.properties
+Bundle-Version: 3.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: model.properties,model.properties.beans
+Import-Package: com.stereokrauts.lib.logging
+Bundle-Vendor: Stereokrauts

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Yamaha DM1000
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.mixer.yamaha.dm1000;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.mixer.yamaha.dm1000
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.logging,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.lib.midi.util,
+ com.stereokrauts.plugin.midibridge,
+ com.stereokrauts.stereoscope.gui.metrics.model,
+ com.stereokrauts.stereoscope.mixer.mixer.yamaha.common,
+ com.stereokrauts.stereoscope.mixer.yamaha.genericmidsize,
+ com.stereokrauts.stereoscope.mixer.yamaha.genericmidsize.midi,
+ com.stereokrauts.stereoscope.model.messaging.api,
+ com.stereokrauts.stereoscope.plugin.interfaces,
+ com.stereokrauts.stereoscope.plugin.model,
+ com.stereokrauts.stereoscope.plugin.ui,
+ model.beans,
+ model.mixer.interfaces

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Spring Extensions for Eclipse (Utility Bundle for Spring and Extensions)
+Bundle-SymbolicName: org.eclipse.springframework.util
+Bundle-Version: 1.0.3
+Bundle-ClassPath: springextensionutils.jar
+Bundle-Activator: org.eclipse.springframework.util.Activator
+Bundle-Vendor: Martin Lippert
+Export-Package: org.eclipse.springframework.util
+Import-Package: org.eclipse.core.runtime,
+ org.osgi.framework,
+ org.osgi.util.tracker,
+ org.springframework.beans.factory,
+ org.springframework.context,
+ org.springframework.core.io.support
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

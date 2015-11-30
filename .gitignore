@@ -1,0 +1,13 @@
+.project
+.classpath
+.settings/
+.metadata
+
+*.swp
+*.bak
+*.tmp
+*.class
+hs_err_pid*
+
+bin/
+target/

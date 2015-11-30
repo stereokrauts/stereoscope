@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereokrauts Logging Library
+Bundle-SymbolicName: lib.logging
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.lib.logging
+Bundle-Vendor: Stereokrauts
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: com.springsource.org.apache.log4j;bundle-version="1.2.15"

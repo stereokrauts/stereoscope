@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Plugin Interfaces
+Bundle-SymbolicName: stereoscope.plugin.interfaces;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.stereoscope.gui.metrics.model,
+ com.stereokrauts.stereoscope.model.messaging.api,
+ model.beans,
+ model.mixer.interfaces,
+ org.osgi.framework
+Bundle-Activator: com.stereokrauts.stereoscope.plugin.interfaces.Activator
+Bundle-ActivationPolicy: lazy
+Export-Package: com.stereokrauts.stereoscope.plugin.interfaces

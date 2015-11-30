@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Stereoscope</title>
+		<link rel="stylesheet" type="text/css" href="css/stsc.css">
+		<script data-main="js/main" src="js/lib/require.js"></script>
+	</head>
+	<body>	
+		<div id="app">
+			<div class="off-canvas-wrap" data-offcanvas>
+  				<div class="inner-wrap" id="innerApp">
+  					<nav class="tab-bar">
+  						<section class="left-small">
+        					<a class="left-off-canvas-toggle" id="menuMixerButton" href="#"><span></span></a>
+      					</section>
+  						<section class="right-small">
+        					<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      					</section>
+  						<section class="middle tab-bar-section" id="sectionTitle">
+  							<h1 class="title">Stereoscope3</h1>
+  						</section>
+  					</nav>
+  					<aside class="left-off-canvas-menu">
+  						<ul class="off-canvas-list" id="mixerPageList"></ul>
+  					</aside>
+  					<aside class="right-off-canvas-menu">
+  						<ul class="off-canvas-list" id="appMenuList"></ul>
+  					</aside>
+  					<p class="off-canvas-height-hack"> </p>
+  					<div id="sockStat"></div>
+					<div id="main"></div>
+					
+					<a class="exit-off-canvas"></a>
+  				</div>
+  			</div>
+		</div>
+	</body>
+</html>

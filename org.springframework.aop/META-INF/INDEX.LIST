@@ -1,0 +1,22 @@
+JarIndex-Version: 1.0
+
+org.springframework.aop.jar
+org
+org/springframework
+org/springframework/aop
+org/springframework/aop/aspectj
+org/springframework/aop/aspectj/annotation
+org/springframework/aop/aspectj/autoproxy
+org/springframework/aop/config
+org/springframework/aop/framework
+org/springframework/aop/framework/adapter
+org/springframework/aop/framework/autoproxy
+org/springframework/aop/framework/autoproxy/target
+org/springframework/aop/interceptor
+org/springframework/aop/scope
+org/springframework/aop/support
+org/springframework/aop/support/annotation
+org/springframework/aop/target
+org/springframework/aop/target/dynamic
+overview.html
+

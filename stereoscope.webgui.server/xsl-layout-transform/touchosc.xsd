@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="layout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="tabpage"/>
+      </xs:sequence>
+      <xs:attribute name="mode" use="required" type="xs:integer"/>
+      <xs:attribute name="orientation" use="required" type="xs:NCName"/>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tabpage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="control"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="scalef" use="required" type="xs:decimal"/>
+      <xs:attribute name="scalet" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="control">
+    <xs:complexType>
+      <xs:attribute name="background" type="xs:boolean"/>
+      <xs:attribute name="centered" type="xs:boolean"/>
+      <xs:attribute name="color" use="required" type="xs:NCName"/>
+      <xs:attribute name="h" use="required" type="xs:integer"/>
+      <xs:attribute name="inverted" type="xs:boolean"/>
+      <xs:attribute name="local_off" type="xs:boolean"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="norollover" type="xs:boolean"/>
+      <xs:attribute name="osc_cs"/>
+      <xs:attribute name="outline" type="xs:boolean"/>
+      <xs:attribute name="response" type="xs:NCName"/>
+      <xs:attribute name="scalef" type="xs:decimal"/>
+      <xs:attribute name="scalet" type="xs:decimal"/>
+      <xs:attribute name="size" type="xs:integer"/>
+      <xs:attribute name="text" type="xs:base64Binary"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="w" use="required" type="xs:integer"/>
+      <xs:attribute name="x" use="required" type="xs:integer"/>
+      <xs:attribute name="y" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

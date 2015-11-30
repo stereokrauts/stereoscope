@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Metrics GUI
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.gui.metrics
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.gui.metrics.model
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

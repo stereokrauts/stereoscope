@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Plugin API
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.plugin;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.plugin.midibridge,com.stereokrauts.st
+ ereoscope.plugin.guihelper,com.stereokrauts.stereoscope.plugin.manage
+ r,com.stereokrauts.stereoscope.plugin.model,com.stereokrauts.stereosc
+ ope.plugin.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.logging,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.plugin.midibridge,
+ com.stereokrauts.stereoscope.plugin.interfaces,
+ model.beans,
+ org.osgi.framework,
+ org.springframework.beans,
+ org.springframework.beans.factory;version="3.1.1.RELEASE",
+ org.springframework.context,
+ org.springframework.core.io.support
+Bundle-Activator: com.stereokrauts.stereoscope.plugin.Activator
+Eclipse-ExtensibleAPI: true

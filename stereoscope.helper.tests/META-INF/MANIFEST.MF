@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: stereoscope.helper.tests
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.helper.tests,
+ stereokrauts.junit.util

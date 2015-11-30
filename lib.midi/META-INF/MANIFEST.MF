@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereokrauts Generic MIDI Library for Java
+Bundle-SymbolicName: lib.midi
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.lib.midi.api;uses:="javax.sound.midi"
+ ,com.stereokrauts.lib.midi.support,com.stereokrauts.lib.midi.util;use
+ s:="com.stereokrauts.lib.midi.api"
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: 
+ com.stereokrauts.lib.binary,
+ com.stereokrauts.lib.logging,
+ org.osgi.framework;version="1.6.12.RELEASE"
+Bundle-Vendor: Stereokrauts

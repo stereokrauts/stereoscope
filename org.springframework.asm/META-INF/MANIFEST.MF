@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Spring ASM
+Bundle-SymbolicName: org.springframework.asm
+Bundle-Version: 3.1.1.RELEASE
+Bundle-Vendor: SpringSource
+Export-Package: org.springframework.asm;version="3.1.1.RELEASE",
+ org.springframework.asm.commons;version="3.1.1.RELEASE";uses:="org.springframework.asm",
+ org.springframework.asm.signature;version="3.1.1.RELEASE"
+Bundle-Classpath: org.springframework.asm-3.1.1.RELEASE.jar
+Created-By: 1.5.0_04-b05 (Sun Microsystems Inc.)
+Implementation-Vendor: France Telecom R&D
+Tool: Bundlor 1.0.0.RELEASE
+Implementation-Version: 3.1.1.RELEASE
+Ant-Version: Apache Ant 1.6.2
+Implementation-Title: org.springframework.asm
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

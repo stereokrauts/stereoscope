@@ -1,0 +1,9 @@
+Transform xml to xsl-schema:
+
+$ java -jar trang.jar maincontrol_stereoscope2-ipad-64ch.xml touchosc.xsd
+
+Generate java source from xsd schema:
+
+$ xjc -d ../src/main/java -p stereoscope.webgui.touchosc touchosc.xsd
+or Windows:
+C:\> "<path_to_javasdk>\bin\xjc" -d ..\src\main\java -p stereoscope.webgui.touchosc touchosc.xsd

@@ -1,0 +1,40 @@
+/**
+ * This macro is one output/bus/aux delay with label
+ * Variables are (besides x and y):
+ * n: number of output of specific unit
+ * unit: the unit to be controlled (bus/aux/omni)
+ * color: color of this unit
+ */
+{
+	"type": "volumeFader",
+	"name": "${unit} ${n} delay",
+	"oscMessage": "/stereoscope/output/${unit}/${n}/delay",
+	"dataType": "float",
+	"initValue": 0.0,
+	"coords": {"x": ${x}, "y": ${y}},
+	"width": 30,
+	"height": 100,
+	"color": "${color}",
+	"visibility": true,
+	"orient": "horizontal",
+	"mode": "normal",
+	"label": false,
+	"labelOscMessage": "/null"
+},
+{
+	"type": "staticLabel",
+	"name": "${unit} ${n} label",
+	"oscMessage": "/null",
+	"dataType": "string",
+	"initValue": "${n}",
+	"coords": {"x": ${x},"y": ${y + 110}},
+	"width": 30,
+	"height": 30,
+	"color": "${color}",
+	"visibility": true,
+	"orient": "horizontal",
+	"background": true,
+	"bgColor": "gray",
+	"edge": false,
+	"size": 12
+}

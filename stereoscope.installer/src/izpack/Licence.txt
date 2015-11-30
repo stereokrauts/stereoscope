@@ -1,0 +1,29 @@
+License Terms for Stereoscope
+
+The customer agrees to the following statements when
+purchasing Stereoscope:
+
+1. a license may only be used on one computer at a time
+(but may be installed on multiple computers),
+
+2. we restrict our liability to damage caused deliberately
+or by gross negligence,
+
+3. you must not use this software in security relevant systems.
+
+4. you do not have permission, to distribute copies of this
+software.
+
+5. you may copy the software in a usual amount for the purpose
+of a personal backup.
+
+6. you may not alter the software or remove components of it.
+
+7. in case of a termination of the contract you have to destroy
+all licenses which are related to this termination.
+
+8. you agree to all licenses of third parties, which are contained
+in this software (oscP5 and the Apache license)
+
+9. you have taken notice, that this software is in no way releated
+or supported by Yamaha.

@@ -1,0 +1,238 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>stereoscope.webgui</groupId>
+	<artifactId>stereoscope.webgui.client</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<parent>
+		<groupId>com.stereokrauts</groupId>
+		<artifactId>stereoscope.app</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+		<relativePath>../stereoscope.app/pom.xml</relativePath>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.skwakman.nodejs-maven-plugin</groupId>
+				<artifactId>nodejs-maven-plugin</artifactId>
+				<version>1.0.5-node-0.10.25</version>
+				<executions>
+					<execution>
+						<id>install-nodejs</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>extract</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- target directory for node binaries --> 
+					<targetDirectory>
+						<!-- ${basedir}/target/nodejs/ -->
+						${project.build.directory}/nodejs/
+					</targetDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.bringking</groupId>
+				<artifactId>requirejs-maven-plugin</artifactId>
+				<version>2.0.4</version>
+				<executions>
+					<execution>
+						<id>build-js</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>optimize</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- use the previously installed node binary -->
+					<nodeExecutable>
+						<!-- ${project.build.directory}/nodejs/node -->
+					</nodeExecutable>
+					<!-- path to optimizer json config file(s) -->
+					<configFile>
+						${project.basedir}/src/main/config/buildconfig.js
+					</configFile>
+					<!-- optional path to optimizer executable -->
+					<optimizerFile>
+						<!-- ${project.basedir}/src/main/config/r.js -->
+					</optimizerFile>
+					<!-- optional parameters to optimizer executable (all done in config 
+						file) -->
+					<optimizerParameters>
+						<!-- <parameter>optimize=closure</parameter> -->
+						<!-- <parameter>baseUrl=${project.basedir}/bin</parameter> -->
+					</optimizerParameters>
+					<!-- Whether or not to process configFile with maven filters. If you 
+						use this option, some options in your configFile must resolve to absolute 
+						paths (see below) -->
+					<filterConfig>
+						false
+					</filterConfig>
+					<!-- Skip requirejs optimization if true -->
+					<skip>
+						false
+					</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>replace-js-file-link</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+
+						<configuration>
+							<file>bin/index.html</file>
+							<ignoreErrors>true</ignoreErrors>
+							<regex>true</regex>
+							<replacements>
+								<replacement>
+									<token>data-main="js/main" src="js/lib/require.js"</token>
+									<value>src="js/lib/almond.js"</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>replace-js-version-number</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+
+						<configuration>
+							<file>src/main/webapp/js/commons.js</file>
+							<ignoreErrors>true</ignoreErrors>
+							<regex>true</regex>
+							<replacements>
+								<replacement>
+									<token>version: '.*',</token>
+									<value>version: '${project.version}',</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
+			<plugin>
+				<groupId>com.github.searls</groupId>
+				<artifactId>jasmine-maven-plugin</artifactId>
+				<version>1.3.1.6-SNAPSHOT</version>
+				<configuration>
+					<jsSrcDir>${project.basedir}/stsc</jsSrcDir>
+					<jsTestSrcDir>${project.basedir}/stsc/spec</jsTestSrcDir>
+					<!-- <srcDirectoryName>/stsc</srcDirectoryName> -->
+					<specDirectoryName>/stsc/spec</specDirectoryName>
+					<!-- > <specIncludes> <include>**/lib/*.js</include> <include>**/*Spec.js</include> 
+						<include>**/*Spec.coffee</include> </specIncludes> -->
+					<preloadSources>
+						<source>/lib/sockjs-0.3.4.js</source>
+						<source>/lib/easeljs-0.7.1.min.js</source>
+						<source>/lib/preloadjs-0.4.1.min.js</source>
+						<source>/lib/jquery-2.0.3.js</source>
+						<source>/lib/underscore.js</source>
+						<source>/lib/jquery-ui-1.10.3.custom.js</source>
+						<source>/lib/backbone.js</source>
+						<source>/steal/steal.js?stsc/tests.js</source>
+					</preloadSources>
+					<additionalContexts>
+						<context>
+							<contextRoot>/steal</contextRoot>
+							<directory>${project.basedir}/steal</directory>
+						</context>
+						<context>
+							<contextRoot>/lib</contextRoot>
+							<directory>${project.basedir}/lib</directory>
+						</context>
+						<context>
+							<contextRoot>/stsc</contextRoot>
+							<directory>${project.basedir}/stsc</directory>
+						</context>
+					</additionalContexts>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.github.bringking
+										</groupId>
+										<artifactId>
+											requirejs-maven-plugin
+										</artifactId>
+										<versionRange>
+											[2.0.4,)
+										</versionRange>
+										<goals>
+											<goal>optimize</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.github.skwakman.nodejs-maven-plugin
+										</groupId>
+										<artifactId>
+											nodejs-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.0.5-node-0.10.25,)
+										</versionRange>
+										<goals>
+											<goal>extract</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.google.code.maven-replacer-plugin
+										</groupId>
+										<artifactId>replacer</artifactId>
+										<versionRange>
+											[1.5.1,)
+										</versionRange>
+										<goals>
+											<goal>replace</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

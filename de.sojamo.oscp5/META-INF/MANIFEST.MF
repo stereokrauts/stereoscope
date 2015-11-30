@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Library for OSC Communication (Oscp5)
+Bundle-SymbolicName: oscp5
+Bundle-Version: 1.0.0
+Bundle-ClassPath: oscP5.jar
+Export-Package: netP5,
+ oscP5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: Andreas Schlegel, Sojamo

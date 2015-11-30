@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="">
+	
+	<!-- Set this to the Ruby windows exec path ($PATH won't work) -->
+	<property name="win_path" value="C:\Ruby193\bin" />
+	<condition property="sass_exec" value="${win_path}\sass.bat" else="sass">
+		<os family="windows" />
+	</condition>
+	<condition property="compass_exec" value="${win_path}\compass.bat" else="compass">
+		<os family="windows" />
+	</condition>
+
+	<!-- Compile .scss and .sass files in the stsc/sass directory using SASS -->
+	<target name="sass.compile">
+		<property name="sass.dir" value="stsc/sass" />
+		<property name="css.dir" value="stsc/css" />
+
+		<apply executable="${sass_exec}" verbose="true" force="true" failonerror="true">
+			<arg value="--unix-newline" />
+			<arg value="--compass" />
+			<srcfile />
+			<targetfile />
+			<fileset dir="${sass.dir}" includes="**/*.scss,**/*.sass" excludes="**/_*" />
+			<firstmatchmapper>
+				<globmapper from="*.sass" to="*.css" />
+				<globmapper from="*.scss" to="*.css" />
+			</firstmatchmapper>
+		</apply>
+	</target>
+
+	<!-- Compile .scss files in the stsc/sass directory using Compass -->
+	<!-- Directories defined in file config.rb -->
+	<target name="compass.compile">
+		<exec executable="${compass_exec}">
+			<arg value="compile" />
+		</exec>
+	</target>
+</project>

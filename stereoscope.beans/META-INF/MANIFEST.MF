@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Beans
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.beans
+Bundle-Version: 3.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: aspects.observer,model.beans,model.beans.groups
+Import-Package: com.stereokrauts.lib.logging,
+ model.properties,
+ model.properties.beans,
+ org.aspectj.lang,
+ org.aspectj.runtime,
+ org.aspectj.runtime.internal,
+ org.aspectj.runtime.reflect,
+ org.aspectj.weaver
+Require-Bundle: org.aspectj.runtime

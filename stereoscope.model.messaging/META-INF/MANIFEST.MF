@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Messaging System
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.model.messaging
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.model.messaging,
+ com.stereokrauts.stereoscope.model.messaging.annotations,
+ com.stereokrauts.stereoscope.model.messaging.dispatching,
+ com.stereokrauts.stereoscope.model.messaging.message,
+ com.stereokrauts.stereoscope.model.messaging.message.control,
+ com.stereokrauts.stereoscope.model.messaging.message.dsp,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.dynamics,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.labels,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.peq,
+ com.stereokrauts.stereoscope.model.messaging.message.internal,
+ com.stereokrauts.stereoscope.model.messaging.message.layouts,
+ com.stereokrauts.stereoscope.model.messaging.message.mixerglobal,
+ com.stereokrauts.stereoscope.model.messaging.message.outputs,
+ com.stereokrauts.stereoscope.model.messaging.message.outputs.labels,
+ com.stereokrauts.stereoscope.model.messaging.message.resync,
+ com.stereokrauts.stereoscope.model.messaging.priorization
+Require-Bundle: lib.logging;bundle-version="1.0.0",
+ stereoscope.model.messaging.interfaces;bundle-version="1.0.0",
+ stereoscope.mixer;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

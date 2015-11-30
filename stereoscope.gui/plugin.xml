@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.stereokrauts.lib.common.spring.SpringViewFactory"
+            id="stereoscope.controller.startup"
+            name="Startup">
+      </view>
+      <view
+            class="com.stereokrauts.lib.common.spring.SpringViewFactory"
+            icon="platform:/plugin/org.eclipse.ui/icons/full/obj16/signed_yes_tbl.gif"
+            id="stereoscope.controller.license"
+            name="Licenses"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.stereokrauts.stereoscope.gui.startup.StartupPerspectiveFactory"
+            id="stereoscope.gui.perspectives.startup"
+            name="Startup">
+      </perspective>
+   </extension>
+   <extension
+         id="stereoscopeGuiApplication"
+         name="Stereoscope"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.stereokrauts.stereoscope.gui.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="StereoscopeGuiProduct"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="stereoscope.gui.stereoscopeGuiApplication"
+            name="Stereoscope">
+         <property
+               name="appName"
+               value="Stereoscope">
+         </property>
+         <property
+               name="windowImages"
+               value="platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_16x16.png,platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_32x32.png,platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_48x48.png,platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_64x64.png,platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_128x128.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="platform:/plugin/stereoscope/src/main/resources/images/stsc-icon_128x128.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Stereoscope 3-SNAPSHOT&#x0A;&#x0A;Copyright 2010-2014 Stereokrauts Tobias Heide &amp; Roland Jansen GbR.&#x0A;All rights reserved.&#x0A;&#x0A;This product contains software developed by&#x0A;&#x0A;    Andreas Schlegel http://sojamo.de&#x0A;    Apache Software Foundation http://apache.org&#x0A;    Eclipse Foundation http://www.eclipse.org&#x0A;    Springsource Community http://www.springsource.org&#x0A;    Oracle Corporation http://java.com">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/stereoscope.gui/application.css">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.stereokrauts.lib.common.spring.SpringViewFactory"
+            default="false"
+            id="stereoscope.controller.document"
+            name="DocumentEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="stereoscope.gui.commands.categories.license"
+            name="License">
+      </category>
+      <category
+            id="stereoscope.gui.commands.categories.document"
+            name="Document">
+      </category>
+      <command
+            categoryId="stereoscope.gui.commands.categories.document"
+            defaultHandler="com.stereokrauts.stereoscope.gui.commands.SaveDocumentHandler"
+            description="Saves the document that currently has focus"
+            id="stereoscope.gui.commands.command.saveDocument"
+            name="Save Document">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.categories.document"
+            defaultHandler="com.stereokrauts.stereoscope.gui.commands.SaveDocumentAsHandler"
+            description="Saves the document that has focus under different name."
+            id="stereoscope.gui.commands.command.saveDocumentAs"
+            name="Save Document as ...">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.categories.document"
+            defaultHandler="com.stereokrauts.lib.common.spring.SpringCommandHandlerFactory"
+            description="Creates a new document"
+            id="stereoscope.gui.commands.command.newDocument"
+            name="New document ...">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.categories.document"
+            defaultHandler="com.stereokrauts.lib.common.spring.SpringCommandHandlerFactory"
+            description="Opens an existing document"
+            id="stereoscope.gui.commands.command.openDocument"
+            name="Open Document ...">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.categories.document"
+            defaultHandler="org.eclipse.ui.internal.handlers.QuitHandler"
+            description="Quit application"
+            id="stereoscope.gui.commands.command.quit"
+            name="Quit">
+      </command>
+      <category
+            id="stereoscope.gui.commands.category.help"
+            name="Help">
+      </category>
+      <command
+            categoryId="stereoscope.gui.commands.category.help"
+            defaultHandler="org.eclipse.ui.internal.about.AboutHandler"
+            id="stereoscope.gui.commands.command.about"
+            name="About">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.category.help"
+            id="stereoscope.gui.commands.command.eula"
+            name="License Agreement / EULA">
+      </command>
+      <command
+            categoryId="stereoscope.gui.commands.category.help"
+            defaultHandler="com.stereokrauts.stereoscope.gui.commands.OpenLinkInBrowserHandler"
+            description="Opens a link in the OS default browser"
+            id="stereoscope.gui.commands.command.openWebpage"
+            name="Open Webpage in Browser">
+         <commandParameter
+               id="stereoscope.gui.commands.parameter.uri"
+               name="URI of a Webpage"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            defaultHandler="com.stereokrauts.stereoscope.gui.commands.UserFeedbackCommand"
+            id="stereoscope.gui.command.help.userfeedback"
+            name="User Feedback">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="stereoscope.gui.menus.file"
+               label="File">
+            <command
+                  commandId="stereoscope.gui.commands.command.newDocument"
+                  label="New document ..."
+                  style="push">
+            </command>
+            <separator
+                  name="stereoscope.gui.menu.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="stereoscope.gui.commands.command.openDocument"
+                  label="Open document ..."
+                  style="push">
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.saveDocument"
+                  label="Save Document ..."
+                  style="push">
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.saveDocumentAs"
+                  label="Save Document as ..."
+                  style="push">
+            </command>
+            <separator
+                  name="stereoscope.gui.separator2"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="stereoscope.gui.commands.command.quit"
+                  label="Quit"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               id="stereoscope.gui.menus.help"
+               label="Help">
+            <command
+                  commandId="stereoscope.gui.commands.command.about"
+                  label="About"
+                  style="push">
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.eula"
+                  label="License Agreement / EULA"
+                  style="push">
+            </command>
+            <separator
+                  name="stereoscope.gui.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="stereoscope.gui.commands.command.openWebpage"
+                  label="Documentation"
+                  style="push">
+               <parameter
+                     name="stereoscope.gui.commands.parameter.uri"
+                     value="http://stereokrauts.com/documentation/">
+               </parameter>
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.openWebpage"
+                  label="License Download Webapp"
+                  style="push">
+               <parameter
+                     name="stereoscope.gui.commands.parameter.uri"
+                     value="http://stereokrauts.com/licenses/">
+               </parameter>
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.openWebpage"
+                  label="Webshop"
+                  style="push">
+               <parameter
+                     name="stereoscope.gui.commands.parameter.uri"
+                     value="http://stereokrauts.com/shop/">
+               </parameter>
+            </command>
+            <command
+                  commandId="stereoscope.gui.commands.command.openWebpage"
+                  label="Homepage"
+                  style="push">
+               <parameter
+                     name="stereoscope.gui.commands.parameter.uri"
+                     value="http://www.stereokrauts.com">
+               </parameter>
+            </command>
+            <command
+                  commandId="stereoscope.gui.command.help.userfeedback"
+                  label="Give us your feedback..."
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>

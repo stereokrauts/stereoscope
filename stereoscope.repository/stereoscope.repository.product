@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Stereoscope" uid="com.stereokrauts.stereoscope" id="stereoscope.gui.StereoscopeGuiProduct" application="stereoscope.gui.stereoscopeGuiApplication" version="3.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/stereoscope/src/main/resources/images/stsc-icon_128x128.png"/>
+      <text>
+         Stereoscope 3-SNAPSHOT
+
+Copyright 2010-2014 Stereokrauts Tobias Heide &amp; Roland Jansen GbR.
+All rights reserved.
+
+This product contains software developed by
+
+    Andreas Schlegel http://sojamo.de
+    Apache Software Foundation http://apache.org
+    Eclipse Foundation http://www.eclipse.org
+    Springsource Community http://www.springsource.org
+    Oracle Corporation http://java.com
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Dorg.eclipse.equinox.http.jetty.http.port=8123
+-Dosgi.requiredJavaVersion=1.7
+-noverify
+-XX:-UseSplitVerifier
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/stereoscope/src/main/resources/images/stsc-icon_16x16.png" i32="/stereoscope/src/main/resources/images/stsc-icon_32x32.png" i48="/stereoscope/src/main/resources/images/stsc-icon_48x48.png" i64="/stereoscope/src/main/resources/images/stsc-icon_64x64.png" i128="/stereoscope/src/main/resources/images/stsc-icon_128x128.png"/>
+
+   <splash
+      location="stereoscope"
+      startupProgressRect="5,275,445,15"
+      startupMessageRect="7,252,445,20"
+      startupForegroundColor="000000" />
+   <launcher name="stereoscope">
+      <linux icon="icons/sk-launcher_256x256.xpm"/>
+      <macosx icon="icons/stsc-icon_128x128.icns"/>
+      <solaris/>
+      <win useIco="true">
+         <ico path="icons/stsc-icon_win.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</linux>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</macos>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</windows>
+   </vm>
+
+   <license>
+        <text>
+   Stereoscope End User License
+
+The customer agrees to the following statements when purchasing Stereoscope: 
+
+1. a license may only be used on one computer at a time (but may be installed on multiple computers),
+2. we restrict our liability to damage caused deliberately or by gross negligence, you must not use this software in security relevant systems. 
+3. you do not have permission, to distribute copies of this software. 
+4. you may copy the software in a usual amount for the purpose of a personal backup. 
+5. you may not alter the software or remove components of it. 
+6. in case of a termination of the contract you have to destroy all licenses which are related to this termination. 
+7. you agree to all licenses of third parties, which are contained in this software (oscP5, Apache commons, Apache xmlbeans and MMJ library by humatic GmbH)
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="stereoscope.feature" version="3.0.0.qualifier"/>
+   </features>
+
+   <configurations>
+      <plugin id="lib.midi.java" autoStart="true" startLevel="0" />
+      <plugin id="lib.midi.macos" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.aspectj" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.platform" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.springframework.util" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.extender" autoStart="true" startLevel="0" />
+      <plugin id="org.vertx.osgi" autoStart="true" startLevel="6" />
+      <plugin id="stereoscope" autoStart="true" startLevel="6" />
+      <plugin id="stereoscope.gui" autoStart="true" startLevel="5" />
+      <plugin id="stereoscope.licensing" autoStart="true" startLevel="0" />
+      <plugin id="stereoscope.plugin" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

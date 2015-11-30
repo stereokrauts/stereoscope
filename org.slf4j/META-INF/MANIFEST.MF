@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Slf4j
+Bundle-SymbolicName: org.slf4j
+Bundle-Version: 1.0.0
+Bundle-ClassPath: slf4j-api-1.7.4.jar
+Export-Package: org.slf4j;version="1.7.4";uses:="org.slf4j.spi,org.slf4j.helpers",
+ org.slf4j.helpers;version="1.7.4";uses:="org.slf4j.spi,org.slf4j",
+ org.slf4j.spi;version="1.7.4";uses:="org.slf4j"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

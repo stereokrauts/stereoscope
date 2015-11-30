@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Helper for OSGi Access Restrictions
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.helper.accessrestrictions;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Fragment-Host: system.bundle; extension:=framework
+Export-Package: org.w3c.dom
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

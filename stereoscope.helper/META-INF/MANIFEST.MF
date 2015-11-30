@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Helper Functions
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.helper
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.helper
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.stereoscope.gui.metrics.model,
+ com.stereokrauts.stereoscope.model.messaging.api,
+ com.stereokrauts.stereoscope.model.messaging.message,
+ com.stereokrauts.stereoscope.plugin.interfaces,
+ model.mixer.interfaces

@@ -1,0 +1,43 @@
+/*******************************************
+ * CSS CLASSES FOR MEDIA QUERIES
+ * -----------------------------------------
+ * These are the media definitions read by
+ * model/MediaQueryModel.js
+ * 
+ * The font-family selector is just a
+ * container that holds the query rules.
+ * The rules are located and read through 
+ * the meta-tag classnames by app code.
+ * The strings have been surrounded 
+ * by slashes to be recognized by Phantom.js
+ */
+
+
+/******************
+ * iPhone Queries 
+ */
+meta.stereoscope-mq-ipp {
+	font-family: "/only screen and (width: 320px) and (height: 480px)/";
+}
+meta.stereoscope-mq-ipl {
+	font-family: "/only screen and (width: 480px) and (height: 320px)/";
+}
+meta.stereoscope-mq-ip5p {
+  font-family: "/only screen and (width: 320px) and (height: 568px)/";
+}
+meta.stereoscope-mq-ip5l {
+	font-family: "/only screen and (width: 568px) and (height: 320px)/";
+}
+meta.stereoscope-mq-ip6p {
+  font-family: "/only screen and (width: 375px) and (height: 667px)/";
+}
+meta.stereoscope-mq-ip6l {
+  font-family: "/only screen and (width: 667px) and (height: 375px)/";
+}
+meta.stereoscope-mq-ip6pp {
+	font-family: "/only screen and (width: 414px) and (height: 736px)/";
+}
+meta.stereoscope-mq-ip6pl {
+	font-family: "/only screen and (width: 736px) and (height: 414px)/";
+}
+

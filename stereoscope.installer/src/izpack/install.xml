@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<installation version="1.0">
+    <!-- 
+        The info section.
+        The meaning of the tags should be natural ...
+    -->
+    <info>
+        <appname>Stereoscope 3</appname>
+        <appversion>3</appversion>
+        <authors>
+            <author email="theide@stereokrauts.com" name="Tobias Heide"/>
+            <author email="jansen@stereokrauts.com" name="Roland Jansen"/>
+        </authors>
+        <url>http://www.stereokrauts.com/</url>
+        <run-privileged/>
+    </info>
+    <!-- 
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs height="600" resizable="no" width="800">
+        <laf name="substance">
+            <os family="windows"/>
+            <os family="unix"/>
+            <os family="mac"/>
+            <param name="variant" value="business"/>
+        </laf>
+        <modifier key="useHeadingPanel" value="yes"/>
+        <modifier key="useButtonIcons" value="no"/>
+        <modifier key="useLabelIcons" value="no"/>
+        <modifier key="labelGap" value="2"/>
+        <modifier key="layoutAnchor" value="NORTHWEST"/>
+        <modifier key="useHeadingPanel" value="yes"/>
+        <modifier key="headingImageOnLeft" value="yes"/>
+        <modifier key="headingLineCount" value="1"/>
+        <modifier key="headingFontSize" value="1.5"/>
+        <modifier key="headingBackgroundColor" value="0x00ffffff"/>
+        <modifier key="headingPanelCounter" value="text"/>
+        <modifier key="headingPanelCounterPos" value="inHeading"/>
+    </guiprefs>
+    <!-- 
+        The locale section.
+        Asks here to include the English and French langpacks.
+    -->
+    <locale>
+        <langpack iso3="eng"/>
+    </locale>
+    <!-- 
+        The resources section.
+        The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.
+    -->
+    <resources>
+        <res id="LicencePanel.licence" src="Licence.txt"/>
+        <res id="InfoPanel.info" src="Readme.txt"/>
+        <res id="shortcutSpec.xml" src="shortcutSpec.xml"/>
+    </resources>
+    <!-- 
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+    <panels>
+        <!-- <panel classname="com.company.izpack.panels.MyHelloPanel"/>-->
+        <panel classname="InfoPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel"/>
+        <panel classname="PacksPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/>
+        <panel classname="FinishPanel"/>
+    </panels>
+    <!--
+    <jar src="dependency/plexus-utils.jar"/><jar src="../izpack-maven-plugin-example.jar"/>-->
+    <!-- 
+        The packs section.
+        We specify here our packs.
+    -->
+    <packs>
+        <pack name="Base" required="yes">
+            <description>The base files</description>
+            <file override="true" src="Readme.txt" targetdir="$INSTALL_PATH"/>
+            <file override="true" src="Licence.txt" targetdir="$INSTALL_PATH"/>
+            <fileset dir="." override="true" targetdir="$INSTALL_PATH">
+                <include name="**/*"/>
+            </fileset>
+            <executable keep="true" os="mac" stage="postinstall" targetfile="$INSTALL_PATH/correctPermissions.sh"/>
+            <executable keep="true" os="unix" stage="postinstall" targetfile="$INSTALL_PATH/correctPermissions.sh"/>
+            <!-- <file src="script.bat" targetdir="$INSTALL_PATH"/>-->
+            <!-- <parsable targetfile="$INSTALL_PATH/script.bat"/>-->
+            <!-- The file will be parsed -->
+        </pack>
+        <!--
+        <pack name="Sources" required="no"><description>The sources</description><file src="src" targetdir="$INSTALL_PATH"/></pack>-->
+    </packs>
+    <natives>
+        <native name="ShellLink.dll" type="izpack"/>
+        <native name="ShellLink_x64.dll" type="izpack"/>
+    </natives>
+</installation>

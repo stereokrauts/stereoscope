@@ -1,0 +1,99 @@
+steal(
+		'../lib/modernizr'
+).then(
+		'../lib/sockjs-0.3.4.js',
+		'../lib/preloadjs-0.4.1.min.js',
+		'../lib/easeljs-0.7.1.min.js',
+		//'../lib/soundjs-0.5.2.min.js',
+		'../lib/jquery-2.0.3.js',
+		//'../lib/jquery-1.11.1.js',
+		'../lib/underscore.js',
+		//'../lib/log4javascript_uncompressed.js',
+		'../lib/fastclick',
+		//'./css/dark-hive/jquery-ui-1.10.3.custom.css',
+		'./css/foundation.css',
+		'./css/normalize.css',
+		'./css/stsc.css'
+).then(
+		'../lib/backbone',
+		'../lib/tweenjs-0.5.1.min.js',
+		'../lib/tweenjsColorPlugin',
+		'./src/namespace',
+		'./src/statics',
+		'../lib/foundation/foundation'
+).then(
+		'../lib/foundation/foundation.abide.js',
+		'../lib/foundation/foundation.accordion.js',
+		'../lib/foundation/foundation.alert.js',
+		'../lib/foundation/foundation.clearing.js',
+		'../lib/foundation/foundation.dropdown.js',
+		'../lib/foundation/foundation.equalizer.js',
+		'../lib/foundation/foundation.interchange.js',
+		'../lib/foundation/foundation.joyride.js',
+		'../lib/foundation/foundation.magellan.js',
+		'../lib/foundation/foundation.offcanvas.js',
+		'../lib/foundation/foundation.orbit.js',
+		'../lib/foundation/foundation.reveal.js',
+		'../lib/foundation/foundation.slider.js',
+		'../lib/foundation/foundation.tab.js',
+		'../lib/foundation/foundation.tooltip.js',
+		'../lib/foundation/foundation.topbar.js'
+).then(
+		'./src/_super',
+		'./src/collection/LOManagerItemCollection',
+		'./src/collection/LayoutPagesCollection',
+		'./src/collection/LayoutPageControlsCollection'
+).then(
+		'./src/model.controls/ControlModel',
+		'./src/view.controls/ControlView',
+		'./src/view/AppMenuListView',
+		'./src/model/SocketModel',
+		'./src/model.layout/LayoutPageModel',
+		'./src/model/NavBarModel',
+		'./src/model/LoggerModel',
+		'./src/model/PongModel'
+).then(
+		'./src/model.layout/LayoutModel',
+		'./src/model.layoutManager/LOManagerItemModel',
+		'./src/model.layoutManager/LOManagerListModel',
+		'./src/model/AppMenuListModel',
+		'./src/model/AppModel',
+		'./src/model.controls/FaderModel',
+		'./src/model.controls/ButtonModel',
+		'./src/model.controls/LabelModel',
+		'./src/model.controls/VisualFeedbackModel',
+		'./src/model.controls/StatefulSelectBarModel',
+		'./src/model.controls/FrameModel',
+		'./src/view.layout/LayoutPageView',
+		'./src/view.layout/CanvasStackView',
+		'./src/view.layout/LayoutView'
+).then(
+		'./src/view.controls/FaderView',
+		'./src/view.controls/FaderBasicView',
+		'./src/view.controls/FaderVolumeView',
+		'./src/view.controls/ToggleButtonBasicView',
+		'./src/view.controls/ToggleButtonStdView',
+		'./src/view.controls/ButtonBasicView',
+		'./src/view.controls/ButtonStdView',
+		'./src/view.controls/SubPageButtonView',
+		'./src/view.controls/LabelBasicView',
+		'./src/view.controls/LabelStaticView',
+		'./src/view.controls/LabelValueView',
+		'./src/view.controls/RotaryBasicView',
+		'./src/view.controls/RotaryStdView',
+		'./src/view.controls/VisualFeedbackBasicView',
+		'./src/view.controls/StatefulSelectBarView',
+		'./src/view.controls/FrameView',
+		'./src/view/SocketView',
+		'./src/view/PongIntroView',
+		'./src/view/AboutView',
+		'./src/view.layoutManager/LOManagerItemView',
+		'./src/view.layoutManager/LOManagerListView',
+		'./src/view.layoutManager/LOManagerView',
+		'./src/view/NavBarView',
+		'./src/view/AppMenuItemView',
+		'./src/view/AppMenuMixerButtonView',
+		'./src/view/AppView'
+).then(
+		'./src/main'
+);

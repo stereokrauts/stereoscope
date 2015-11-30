@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.stereokrauts.com/stereoscope/mixerPlugin" elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.stereokrauts.com/stereoscope/mixerPlugin">
+	<element name="MixerPlugin">
+		<complexType>
+			<sequence>
+				<element name="DescriptorClass" type="string"></element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

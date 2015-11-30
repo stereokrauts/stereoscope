@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AOP Alliance API
+Bundle-SymbolicName: com.springsource.org.aopalliance
+Bundle-Version: 1.0.0
+Bundle-Vendor: SpringSource
+Export-Package: org.aopalliance.aop;version="1.0.0",
+ org.aopalliance.intercept;version="1.0.0"
+Bundle-Classpath: com.springsource.org.aopalliance-1.0.0.jar
+Created-By: 1.4.2_01-b06 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.5.4
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

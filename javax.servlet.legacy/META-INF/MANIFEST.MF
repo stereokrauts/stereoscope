@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Legacy Servlet
+Bundle-SymbolicName: javax.servlet.legacy
+Bundle-ClassPath: javax.servlet-2.5.0.jar
+Bundle-Version: 2.5.0
+Export-Package: javax.servlet;version="2.5.2",javax.servlet.http;versi
+ on="2.5.2";uses:="javax.servlet"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

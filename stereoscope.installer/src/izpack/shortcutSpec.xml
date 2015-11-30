@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+This is the shortcut specification for windows. Its considered default so on
+Systems that are not shortcut compatible the information is taken from here.
+-->
+<shortcuts>
+<programGroup defaultName="Stereoscope" location="applications||startMenu"/>
+<shortcut
+    name = "Stereoscope"
+    target = "$INSTALL_PATH\stereoscope.exe"
+    commandLine = ""
+    workingDirectory= "$INSTALL_PATH"
+    description="Stereoscope"
+    iconFile="$INSTALL_PATH\stereoscope.exe"
+    iconIndex="1"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    applications="yes"
+    startMenu="yes"
+    startup="no">
+    <createForPack name="Base" />
+</shortcut>
+</shortcuts>

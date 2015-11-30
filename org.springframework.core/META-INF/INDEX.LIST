@@ -1,0 +1,27 @@
+JarIndex-Version: 1.0
+
+org.springframework.core.jar
+org
+org/springframework
+org/springframework/core
+org/springframework/core/annotation
+org/springframework/core/convert
+org/springframework/core/convert/converter
+org/springframework/core/convert/support
+org/springframework/core/enums
+org/springframework/core/env
+org/springframework/core/io
+org/springframework/core/io/support
+org/springframework/core/serializer
+org/springframework/core/serializer/support
+org/springframework/core/style
+org/springframework/core/task
+org/springframework/core/task/support
+org/springframework/core/type
+org/springframework/core/type/classreading
+org/springframework/core/type/filter
+org/springframework/util
+org/springframework/util/comparator
+org/springframework/util/xml
+overview.html
+

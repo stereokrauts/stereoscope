@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereokrauts Commons
+Bundle-SymbolicName: lib.common
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.lib.commons
+Bundle-Vendor: Stereokrauts
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.logging,
+ org.apache.commons.io,
+ org.eclipse.core.runtime,
+ org.eclipse.osgi.service.datalocation;version="1.3.0",
+ org.junit;resolution:=optional,
+ org.junit.rules;resolution:=optional

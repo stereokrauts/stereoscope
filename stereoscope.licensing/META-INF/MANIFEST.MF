@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Licensing
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.licensing
+Bundle-Version: 3.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.commons,
+ com.stereokrauts.lib.logging,
+ org.hamcrest;resolution:=optional,
+ org.junit;resolution:=optional,
+ serialnumberchecker,
+ stereokrauts.junit.util;resolution:=optional
+Export-Package: stereoscope.licensing

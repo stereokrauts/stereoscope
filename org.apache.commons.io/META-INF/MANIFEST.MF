@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Commons I/O
+Bundle-SymbolicName: org.apache.commons.io
+Bundle-Version: 2.4.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.apache.commons.io,
+ org.apache.commons.io.comparator,
+ org.apache.commons.io.filefilter,
+ org.apache.commons.io.input,
+ org.apache.commons.io.monitor,
+ org.apache.commons.io.output
+Bundle-Vendor: Apache

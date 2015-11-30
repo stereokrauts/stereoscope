@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MixerPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.stereokrauts.com/stereoscope/mixerPlugin" xsi:schemaLocation="http://www.stereokrauts.com/stereoscope/mixerPlugin ../../stereoscope.plugin/src/main/xsd/mixerPlugin.xsd ">
+	<DescriptorClass>com.stereokrauts.stereoscope.mixer.yamaha.y01v96i.PluginDescriptor</DescriptorClass>
+</MixerPlugin>

@@ -1,0 +1,67 @@
+/*
+ * This is one input strip for the input pages
+ */
+{
+	"type": "stdToggleButton",
+	"name": "Mute",
+	"oscMessage": "/stereoscope/input/${n}/channelOn",
+	"dataType": "boolean",
+	"initValue": false,
+	"coords": {"x": ${x}, "y": ${y}},
+	"width": 40,
+	"height": 40,
+	"color": "blue",
+	"visibility": true,
+	"orient": "horizontal",
+	"label": true
+},
+{
+	"type": "volumeFader",
+	"name": "Volume Input${n}",
+	"oscMessage": "/stereoscope/input/${n}/level",
+	"dataType": "float",
+	"initValue": 0.0,
+	"coords": {"x": ${x}, "y": ${y + 50}},
+	"width": 40,
+	"height": ${fh},
+	"color": "blue",
+	"visibility": true,
+	"orient": "horizontal",
+	"mode": "normal",
+	"label": "true",
+	"labelOscMessage": "/stereoscope/input/${n}/levelLabel"
+},
+{
+	"type": "valueLabel",
+	"name": "Ch${n} Name",
+	"oscMessage": "/stereoscope/input/${n}/label",
+	"dataType": "string",
+	"initValue": "Ch${n}",
+	"coords": {"x": ${x},"y": ${addFader + 50}},
+	"width": 40,
+	"height": 20,
+	"color": "blue",
+	"visibility": true,
+	"orient": "horizontal",
+	"background": true,
+	"bgColor": "null",
+	"edge": false,
+	"size": 12
+},
+{
+	"type": "staticLabel",
+	"name": "label input${n}",
+	"oscMessage": "/null",
+	"dataType": "string",
+	"initValue": "input ${n}",
+	"coords": {"x": ${x},"y": ${addFader + 80}},
+	"width": 40,
+	"height": 30,
+	"color": "white",
+	"visibility": true,
+	"orient": "horizontal",
+	"background": true,
+	"bgColor": "gray",
+	"edge": false,
+	"size": 12
+}

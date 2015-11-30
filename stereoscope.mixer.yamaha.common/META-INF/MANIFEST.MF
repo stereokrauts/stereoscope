@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mixer Plugin Yamaha Commons
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.mixer.yamaha.common
+Bundle-Version: 3.0.0.qualifier
+Export-Package: com.stereokrauts.stereoscope.mixer.mixer.yamaha.common
+Require-Bundle: stereoscope.plugin;bundle-version="1.0.0",
+ stereoscope.model.messaging.interfaces;bundle-version="1.0.0",
+ stereoscope.mixer;bundle-version="1.0.0",
+ stereoscope.model.messaging;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

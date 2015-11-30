@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Mixer Subsystem
+Bundle-Vendor: Stereokrauts
+Bundle-SymbolicName: stereoscope.mixer
+Bundle-Version: 3.0.0.qualifier
+Export-Package: model.mixer.interfaces
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.stereokrauts.lib.midi.api,
+ com.stereokrauts.stereoscope.model.messaging.api

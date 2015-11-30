@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Vert.x Osgi
+Bundle-SymbolicName: org.vertx.osgi
+Bundle-Version: 1.0.0
+Bundle-Activator: org.vertx.osgi.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.vertx.osgi;uses:="org.osgi.framework,org.osgi.util.tracker,org.vertx.java.core"
+Import-Package: org.osgi.framework,
+ org.osgi.util.tracker;version="1.5.1",
+ org.vertx.java.core,
+ org.vertx.java.core.eventbus,
+ org.vertx.java.core.http,
+ org.vertx.java.core.impl,
+ org.vertx.java.core.json,
+ org.vertx.java.core.sockjs

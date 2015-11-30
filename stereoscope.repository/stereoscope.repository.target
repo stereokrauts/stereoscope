@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="stereoscope" sequenceNumber="37">
+<locations>
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.help.feature.group" version="2.0.1.v20130911-1000"/>
+<unit id="org.eclipse.pde.feature.group" version="3.9.1.v20130911-1000"/>
+<unit id="org.eclipse.sdk.feature.group" version="4.3.1.v20130911-1000"/>
+<unit id="org.eclipse.rcp.sdk.id" version="4.3.1.M20130911-1000"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.9.0.v20130828-0031"/>
+<repository location="http://download.eclipse.org/releases/kepler/"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.ajdt.feature.group" version="2.2.3.e42x-RELEASE-20130625-1400"/>
+<unit id="org.eclipse.contribution.weaving.feature.group" version="2.2.3.e42x-RELEASE-20130625-1400"/>
+<unit id="org.eclipse.equinox.weaving.sdk.feature.group" version="1.0.200.I20130319-1000"/>
+<unit id="org.eclipse.contribution.xref.feature.group" version="2.2.3.e42x-RELEASE-20130625-1400"/>
+<unit id="org.aspectj.feature.group" version="1.7.3.20130613144500-a"/>
+<repository location="http://download.eclipse.org/tools/ajdt/42/update"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.ecore.xcore.ui.feature.group" version="1.1.1.v20131212-0836"/>
+<unit id="org.eclipse.emf.ecore.feature.group" version="2.9.1.v20130827-0309"/>
+<unit id="org.eclipse.emf.feature.group" version="2.9.2.v20131212-0558"/>
+<unit id="org.eclipse.emf.ecore.xcore.feature.group" version="1.1.2.v20131212-0836"/>
+<unit id="org.eclipse.emf.common.feature.group" version="2.9.1.v20130827-0309"/>
+<unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.1.2.v20131212-0836"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.9.2.v20131212-0558"/>
+<repository location="http://download.eclipse.org/modeling/emf/emf/updates/releases/"/>
+</location>
+</locations>
+</target>

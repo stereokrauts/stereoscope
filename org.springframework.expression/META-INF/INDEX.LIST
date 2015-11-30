@@ -1,0 +1,13 @@
+JarIndex-Version: 1.0
+
+org.springframework.expression.jar
+org
+org/springframework
+org/springframework/expression
+org/springframework/expression/common
+org/springframework/expression/spel
+org/springframework/expression/spel/ast
+org/springframework/expression/spel/generated
+org/springframework/expression/spel/standard
+org/springframework/expression/spel/support
+

@@ -1,0 +1,520 @@
+/**
+ * This is a stylesheet for the sass css preprocessor.
+ * Please read README.SCSS.txt in the main directory
+ * of this project to find out how to autocompile in
+ * Eclipse.
+ */
+
+/*
+meta.my-mq-custom {
+  font-family: "/only screen and (min-width: 40em)/";
+  width: 40em;
+}
+*/
+
+$resource-path: "../assets";
+$font-path: "#{$resource-path}/ttf";
+$icon-path: "#{$resource-path}/icons";
+
+/* Imports */
+@import "foundation/_functions";
+@import "foundation/_settings";
+@import "foundation";
+@import "normalize";
+@import "foundation-icons";
+@import "media-queries";
+
+@import "sassy-buttons";
+
+//$font-stack:    Helvetica, sans-serif; 
+$font-stack: Lucida Sans,Lucida Grande,Arial,sans-serif;
+
+/*********
+ * COLORS
+ */
+$background-color: #172f3d;
+$very-dark-gray: #333333;
+$dark-gray: #3D3D3F;
+$medium-gray: #CACFD2;
+$light-gray: #D9DEE1;
+
+/* MENU COLORS */
+$menu-bg-gray: #3e3e3e;
+$menu-line-gray: #484848;
+$menu-icon-gray: #a8a8a8;
+$menu-text-color: white;
+
+$canvas-background: #3c3c3c;
+
+$layout-item-hover-border: #353535;
+$layout-item-hover: #707070;
+
+
+/**************
+ * INIT VALUES
+ */
+$std-width: 1024px; //std iPad width
+$std-height: 768px; //std iPad height
+$default-width: 918px;
+
+/**
+ * FIXED VALUES
+ */
+$nav-height-offset: 45px;
+$lm-header-height: 56px;
+$lm-footer-height: 64px;
+
+/*********
+ * IMAGES
+ */
+$stsc-logo-64x64: "#{$resource-path}/stsc_64x64.png";
+$tosc-logo-64x64: "#{$resource-path}/touchosc_64x64.png";
+
+$menu-icon-mixer: "#{$resource-path}/menu-icon-mixer_24x24_white.png";
+$menu-icon-layouts: "#{$resource-path}/menu-icon-layouts.png";
+$menu-icon-about: "#{$resource-path}/menu-icon-about.png";
+
+$disconnected-icon-blue: "#{$icon-path}/disconnected-icon-64x64-blue.png";
+
+/******
+ * FONTS
+ */
+ /*
+@font-face { font-family: 'mizufalp';
+             src: url("#{$resource-path}/mizufalp.ttf") format('truetype'); 
+}
+
+@font-face { font-family: 'BitmapMania';
+             src: url("#{$resource-path}/BMjapan.TTF") format('truetype'); 
+}
+
+@font-face { font-family: 'fairlight';
+             src: url("#{$resource-path}/fairlight.ttf") format('truetype'); 
+}
+
+@font-face { font-family: 'BitMaze';
+             src: url("#{$resource-path}/bmMase.ttf") format('truetype'); 
+}     
+
+@font-face { font-family: 'BitMapPinhole';
+             src: url("#{$resource-path}/BMpinhole.TTF") format('truetype'); 
+}
+
+@font-face { font-family: 'commo';
+             src: url("#{$resource-path}/Commo-Monospaced.otf"); // format('truetype'); 
+}
+
+@font-face { font-family: 'hachicro';
+             src: url("#{$resource-path}/hachicro.TTF") format('truetype'); 
+}
+
+@font-face { font-family: 'pixelfaceonfire';
+             src: url("#{$resource-path}/pixelfaceonfire.ttf") format('truetype'); 
+}
+
+@font-face { font-family: 'royalsimplicity';
+             src: url("#{$resource-path}/royalsimp.ttf") format('truetype'); 
+}
+
+@font-face { font-family: 'superscreen';
+             src: url("#{$resource-path}/SUPERSCR.TTF") format('truetype'); 
+}
+*/
+
+/*****************
+ * BUTTON CLASSES
+ */
+@mixin red-button {
+	@include sassy-button("matte", 5px, 19px, red);
+}
+
+@mixin green-button{
+	@include sassy-button("matte", 5px, 19px, #cede85, #a7bf35, #333, "inset")
+	//@include sassy-button("matte", 5px, 19px, #50cd33, #41a429, #333, "inset");
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// this is used for styling icons
+i {
+	font-size: 24px;
+}
+
+.off-canvas-wrap,.inner-wrap{
+    height:100%;   
+}
+
+#app {
+	height: 100%;
+}
+
+.off-canvas-height-hack {
+	height: 100%;
+	display: none;
+}
+
+body {
+	//background-color: $background-color;
+	//font: 100% $font-stack;
+	//font-family: $font-stack;
+	//font-family: verminVibes;
+	//color: white;
+	//margin: 0 auto;
+  	//line-height:22px;
+  //padding: 0;
+  //overflow: hidden;
+  
+  /*
+  .headerImg {
+	padding-top: 1em;
+	}
+	*/
+	}
+  
+  
+
+//body{font-family:Lucida Sans,Lucida Grande,Arial,sans-serif;margin:0;line-height:22px;width:960px;margin:0 auto;}
+
+h1 {
+	//padding:30px 0 10px;
+	margin: 15px 0px 15px 20px;
+	line-height:30px;
+	}
+
+ul {
+	padding:0 0 0 15px;
+	}
+a {
+	color:#ae3d26;
+	text-decoration:none;
+	&:hover {
+		text-decoration:underline;
+		}
+	}
+
+hr{border:none;border-top:1px dotted #000;}
+
+#sockStat {
+	position: absolute;
+	top: 6px;
+	right: 60px;
+	//z-index: 110;
+}
+
+#main {
+	//margin-top: 5px;
+	/*
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	*/
+	//top: -140px;
+	//z-index: -1;
+	//width: $std-width;
+	width: 100%;
+	height: 100%;
+}
+
+#footer {
+	position: absolute;
+	bottom: 2px;
+	left: 4px;
+}
+
+.menu-icon-mixer {
+	//@extend .menu-icon;
+	/*
+	text-indent: $tabbar-menu-icon-text-indent;
+      width: $tabbar-menu-icon-width;
+      height: $tabbar-menu-icon-height;
+      display: block;
+      padding: $tabbar-menu-icon-padding;
+      color: $tabbar-menu-icon-color;
+      position: relative;
+	background: url($menu-icon-mixer) center center no-repeat;
+*/
+}
+
+
+/**
+ * LAYOUT MANAGER
+ */
+#layoutListContainer {
+	//position: relative;
+	//background-color: #D9DEE1;
+	//border-radius: 10px;
+	margin: 0;
+	padding: 0;
+	//height: 100%;
+	//height: $std-height - 20px;
+	//border-bottom: green 5px solid;
+	color: $dark-gray;
+	
+	#layoutListHeader {
+		position: absolute;
+		top: $nav-height-offset;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		height: $lm-header-height;
+		border-bottom: green 5px solid;
+		background-color: $light-gray;
+	
+		ul { 
+			position: absolute;
+			left: 0px;
+			//margin: 0;
+			//padding: 0;
+			
+		}
+		
+		li { margin: 0; padding: 0; }
+		
+		a { margin-bottom: 0px;
+			&.no-underscore:hover { text-decoration: none; }
+		}
+		
+		.import-button {
+			position: absolute;
+			right: 0px;
+		}
+		
+	}
+	
+	ul#layoutItems {
+		border-bottom: green 5px solid;
+		border-top: green 5px solid;
+		position: absolute;
+		//top: $nav-height-offset + $lm-header-height;
+		//bottom: $lm-footer-height;
+		top: $nav-height-offset;
+		bottom: 0px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: $light-gray;
+		
+		list-style: none;
+		li { 
+			transition: background-color 0.1s ease,
+				color 0.1s ease;
+			&:nth-child(odd) {
+				background-color: #CACFD2;
+			}
+			&:hover {
+				background-color: $layout-item-hover;
+			}
+			&:last-of-type {
+				border-bottom: #CACFD2 2px solid;
+			}
+		}
+		overflow: auto;
+	}
+
+	.layoutItem {
+		position: relative;
+		height: 90px;
+		&:hover {
+			//background-color: #c1dcbb;
+			background-color: $layout-item-hover;
+			//color: white;
+			color: $light-gray;
+			box-shadow: 0px 1px 10px $layout-item-hover-border inset,
+				0px -1px 10px $layout-item-hover-border inset;
+		}
+	
+		.button {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 130px;
+		}
+	
+		
+		.layoutLoadButton {
+			@include green-button;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 130px;
+		}
+		.layoutActiveButton {
+			@include red-button;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 130px;
+		}
+		
+	
+		.layoutExportButton {
+			@include green-button;
+			position: absolute;
+			top: 20px;
+			left: 700px;
+		}
+	
+		div {
+			//margin: 13px 0px 0px 125px;
+			position: absolute;
+			top: 13px;
+			left: 125px;
+		
+			p {
+				margin: 0px 0px 0px 0px;
+				padding: 0px 0px 0px 0px;
+			
+				&.layoutItemName {
+					font-weight: bold;
+				}
+				&.layoutDescription {
+					font-size: 10px;
+				}
+				&.layoutAuthor {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	
+	#layoutListFooter {
+		position: absolute;
+		bottom: 0px;
+		height: $lm-footer-height;
+		width: 100%;
+		//background-color: black;
+		//background-color: #D9DEE1;
+		border-top: green 5px solid;
+		background-color: $light-gray;
+		
+		.layoutImportButton {
+			@include red-button;
+			margin: 10px 0px 0px 830px;
+		}
+	}
+	
+
+}
+
+ 
+
+
+.toscLayout {
+	background: url("#{$tosc-logo-64x64}") 28px 13px no-repeat;
+}
+
+.stscLayout {
+	background: url("#{$stsc-logo-64x64}") 28px 13px no-repeat;
+}
+
+/**
+ * LAYOUT CANVAS STACK
+ */
+#canvasHost {
+	//background-color: $canvas-background;
+	height: 100%;
+	background-color: $canvas-background;
+	
+	.stateful-select-bar {
+		@include sub-nav();
+		position: absolute;
+		z-index: 100;
+		//bottom: 0px;
+		//margin-top: 10px;
+		background-color: $very-dark-gray;
+		dt {
+			color: white;
+		}
+		dd {
+			a { color: white; };
+		}
+	}
+}
+
+#layoutContainer {
+	background-image: none;
+	background-color: #3c3c3c;
+	//width: 100%;
+	//height: 100%;
+}
+
+/**
+ * LAYOUT MANAGER
+ */
+.aboutSec {
+	max-height: 100%;
+	overflow-y: auto;
+	
+	h1 {
+		background: url("#{$stsc-logo-64x64}") 0px 0px no-repeat;
+		margin-top: 25px;
+		padding-left: 80px;
+		padding-bottom: 3px;
+		min-height: 64px;
+	}
+	
+	.aboutBox {
+		padding: 0px;
+		margin-bottom: 30px;
+		
+		.aboutBoxHeader {
+			padding: 10px 0px 10px 15px;
+			margin-bottom: 0px;
+			color: white;
+			background-color: #303030;
+			//border: 1px solid #303030;
+		}
+		
+		.aboutBoxList {
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			
+			li {
+				padding: 0px;
+				
+				
+				&.aboutItem {
+					border-bottom: 1px solid #d8d8d8;
+					a {
+						display: inline-block;
+						margin: 0px;
+						padding: 6px 0px 5px 15px;
+						width: 100%;
+						height: 100%;
+						transition: background-color 0.3s ease,
+							color 0.1s ease;
+						&:hover {
+							background-color: #d8d8d8;
+						}
+						
+						&.sk-link {
+							padding: 0px 0px 0px 15px;
+						}
+						i {
+							padding: 0px;
+							margin-right: 2px;
+						}
+					}
+					
+					
+				}
+				&.aboutAddress {
+					padding: 0px 0px 0px 15px;
+				}
+				&.addressFirst {
+					margin-top: 10px;
+				}
+			}
+		}
+	
+	}
+}
+
+ 

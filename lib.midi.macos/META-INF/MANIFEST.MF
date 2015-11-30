@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MIDI Bridge for MacOS X
+Bundle-SymbolicName: lib.midi.macos
+Bundle-Version: 3.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ lib/jna-4.0.0.jar,
+ lib/jna-platform-4.0.0.jar
+Import-Package: com.stereokrauts.lib.binary,
+ com.stereokrauts.lib.logging,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.lib.midi.support,
+ org.apache.commons.codec.binary,
+ org.apache.commons.collections.buffer,
+ org.eclipse.core.runtime,
+ org.junit;resolution:=optional,
+ org.springframework.beans.factory;version="3.1.1.RELEASE",
+ org.springframework.context;version="3.1.1.RELEASE",
+ org.springframework.core.io.support;version="3.1.1.RELEASE"

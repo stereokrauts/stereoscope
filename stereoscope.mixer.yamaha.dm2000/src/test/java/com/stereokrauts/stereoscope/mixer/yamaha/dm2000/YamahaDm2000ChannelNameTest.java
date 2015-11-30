@@ -1,0 +1,55 @@
+package com.stereokrauts.stereoscope.mixer.yamaha.dm2000;
+
+import static com.stereokrauts.lib.binary.ByteStringUtil.normalize;
+import static com.stereokrauts.stereoscope.helper.tests.FieldsEqualAssertion.assertFieldsEqual;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.stereokrauts.lib.binary.ByteStringConversion;
+import com.stereokrauts.lib.midi.util.DummyMidiSink;
+import com.stereokrauts.stereoscope.helper.tests.DummyRememberingMixer;
+import com.stereokrauts.stereoscope.model.messaging.message.AbstractMessage;
+import com.stereokrauts.stereoscope.model.messaging.message.inputs.MsgChannelNameChanged;
+
+
+public class YamahaDm2000ChannelNameTest {
+	private DummyMidiSink sink;
+	private DM2000Mixer mixer;
+
+	@Before
+	public void initData()
+	{
+		this.sink = new DummyMidiSink();
+		this.mixer = new DM2000Mixer(null, this.sink);
+	}
+
+	@Test
+	public void channelNameRequest()
+	{
+		final DummyRememberingMixer sink = new DummyRememberingMixer(this.mixer);
+		final DM2000MidiReceiver recv = new DM2000MidiReceiver(this.mixer);
+		AbstractMessage<?> lastMsg;
+		MsgChannelNameChanged expected;
+
+		recv.handleSysex(ByteStringConversion.toBytes(normalize("F0	43	10	3E	0B	02	04	00	00	00	00	00	41	F7")));
+		lastMsg = sink.getLastMessage();
+		expected = new MsgChannelNameChanged(0, "AH01");
+		assertFieldsEqual("Channel names should match", expected, lastMsg);
+
+		recv.handleSysex(ByteStringConversion.toBytes(normalize("F0	43	10	3E	0B	02	04	01	00	00	00	00	42	F7")));
+		lastMsg = sink.getLastMessage();
+		expected = new MsgChannelNameChanged(0, "AB01");
+		assertFieldsEqual("Channel names should match", expected, lastMsg);
+
+		recv.handleSysex(ByteStringConversion.toBytes(normalize("F0	43	10	3E	0B	02	04	02	00	00	00	00	43	F7")));
+		lastMsg = sink.getLastMessage();
+		expected = new MsgChannelNameChanged(0, "ABC1");
+		assertFieldsEqual("Channel names should match", expected, lastMsg);
+
+		recv.handleSysex(ByteStringConversion.toBytes(normalize("F0	43	10	3E	0B	02	04	03	00	00	00	00	44	F7")));
+		lastMsg = sink.getLastMessage();
+		expected = new MsgChannelNameChanged(0, "ABCD");
+		assertFieldsEqual("Channel names should match", expected, lastMsg);
+	}
+}
