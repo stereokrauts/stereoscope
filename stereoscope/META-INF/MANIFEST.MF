@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Stereoscope Main Bundle
+Bundle-SymbolicName: stereoscope;singleton:=true
+Bundle-Version: 3.0.0.qualifier
+Bundle-ClassPath: .,
+ lib/jsr173_1.0_api.jar,
+ lib/resolver.jar,
+ lib/commons-net-3.1.jar,
+ lib/jmdns-3.4.1.jar
+Export-Package: commands,commands.bonjour;uses:="commands",commands.do
+ cument;uses:="model.bus,model,commands",commands.shutdown;uses:="comm
+ ands",main;uses:="main.protection,org.osgi.framework",model,model.bus
+ ; uses:="com.stereokrauts.stereoscope.model.messaging,  com.stereokra
+ uts.stereoscope.plugin.interfaces,  model.surface.touchosc,  model.pr
+ operties,  model.beans,  model.mixer.interfaces",model.controllogic,m
+ odel.plugin;uses:="com.stereokrauts.stereoscope.plugin.interfaces,com
+ .stereokrauts.stereoscope.gui.metrics.model",model.protocol.midi.pass
+ through;uses:="javax.sound.midi.spi,javax.sound.midi,com.stereokrauts
+ .lib.midi.api",model.protocol.osc,model.protocol.osc.handler;uses:="c
+ om.stereokrauts.lib.logging,oscP5,model.surface",model.protocol.osc.t
+ ouchosc; uses:="model.protocol.osc.handler,  model.surface.touchosc, 
+  oscP5,  model.surface",model.surface,model.surface.touchosc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: Stereokrauts
+Bundle-Activator: main.Application
+Import-Package: aspects.observer,
+ com.google.common.base,
+ com.stereokrauts.lib.commons,
+ com.stereokrauts.lib.logging,
+ com.stereokrauts.lib.midi.api,
+ com.stereokrauts.stereoscope.gui.metrics.model,
+ com.stereokrauts.stereoscope.model.messaging,
+ com.stereokrauts.stereoscope.model.messaging.api,
+ com.stereokrauts.stereoscope.model.messaging.dispatching,
+ com.stereokrauts.stereoscope.model.messaging.message,
+ com.stereokrauts.stereoscope.model.messaging.message.control,
+ com.stereokrauts.stereoscope.model.messaging.message.dsp,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.dynamics,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.labels,
+ com.stereokrauts.stereoscope.model.messaging.message.inputs.peq,
+ com.stereokrauts.stereoscope.model.messaging.message.mixerglobal,
+ com.stereokrauts.stereoscope.model.messaging.message.outputs,
+ com.stereokrauts.stereoscope.model.messaging.message.outputs.labels,
+ com.stereokrauts.stereoscope.plugin.interfaces,
+ com.stereokrauts.stereoscope.plugin.model,
+ com.stereokrauts.stereoscope.webgui,
+ com.stereokrauts.stereoscope.webgui.api,
+ javax.servlet;version="2.5.0",
+ javax.servlet.http;version="2.5.0",
+ javax.sound.midi,
+ javax.swing,
+ model.beans,
+ model.mixer.interfaces,
+ model.properties,
+ model.properties.beans,
+ netP5,
+ org.apache.commons.io,
+ org.aspectj.lang,
+ org.aspectj.runtime,
+ org.aspectj.weaver,
+ org.eclipse.core.runtime,
+ org.eclipse.jetty.server,
+ org.eclipse.jetty.server.handler,
+ org.eclipse.jetty.util,
+ org.eclipse.jetty.util.component,
+ org.junit;resolution:=optional,
+ org.osgi.framework,
+ org.springframework.beans.factory;version="3.1.1.RELEASE",
+ org.springframework.context;version="3.1.1.RELEASE",
+ org.springframework.core.env;version="3.1.1.RELEASE",
+ org.springframework.core.io.support;version="3.1.1.RELEASE",
+ oscP5,
+ serialnumberchecker,
+ stereoscope.licensing
+Bundle-ActivationPolicy: lazy

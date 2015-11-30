@@ -466,6 +466,8 @@
 		<module>../lib.midi.macos</module>
 		<module>../lib.midi.macos.test</module>
 		<module>../stereoscope.helper.accessrestrictions</module>
+
+		<module>../stereoscope</module>
 		<module>../stereoscope.gui</module>
 		<module>../stereoscope.feature</module>
 		

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:MixerSurfaceDocument xmlns:tns="http://www.theta-tontechnik.de/stereoscope/MixerSurfaceDocumentSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.theta-tontechnik.de/stereoscope/MixerSurfaceDocumentSchema MixerSurfaceDocumentSchema.xsd ">
+  <tns:version>0</tns:version>
+  <tns:MixerName>yamaha-01v96</tns:MixerName>
+  <tns:MidiInputPortName>YAMAHA 01v96-1</tns:MidiInputPortName>
+  <tns:MidiOutputPortName>YAMAHA 01v96-1</tns:MidiOutputPortName>
+  <tns:Surfaces>
+    <tns:Name>Tobis iPad</tns:Name>
+    <tns:IpAddress>192.168.0.150</tns:IpAddress>
+    <tns:PortIncoming>8000</tns:PortIncoming>
+    <tns:PortOutgoing>9000</tns:PortOutgoing>
+    <tns:SnapFaders>false</tns:SnapFaders>
+    <tns:HasStickyAux>true</tns:HasStickyAux>
+    <tns:StickyAuxNumber>3</tns:StickyAuxNumber>
+  </tns:Surfaces>
+</tns:MixerSurfaceDocument>

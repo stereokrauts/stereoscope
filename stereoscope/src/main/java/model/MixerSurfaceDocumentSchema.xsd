@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.theta-tontechnik.de/stereoscope/MixerSurfaceDocumentSchema" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.theta-tontechnik.de/stereoscope/MixerSurfaceDocumentSchema">
+
+    <element name="MixerSurfaceDocument" type="tns:MixerSurfaceDocumentType"></element>
+
+    <complexType name="MixerSurfaceDocumentType">
+    	<sequence>
+    		<element name="version" type="int"></element>
+    		<element name="MixerName" type="string"></element>
+    		<element name="MidiInputPortName" type="string"></element>
+    		<element name="MidiOutputPortName" type="string"></element>
+    		<element name="Surfaces" type="tns:SurfaceType" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SurfaceType">
+        <annotation>
+        	<documentation>This represents a TouchOscSurface object in the application.</documentation>
+        </annotation>
+        <sequence>
+    		<element name="Name" type="string"></element>
+    		<element name="IpAddress" type="string"></element>
+    		<element name="PortIncoming" type="int"></element>
+    		<element name="PortOutgoing" type="int"></element>
+    		<element name="SnapFaders" type="boolean"></element>
+    		<element name="HasStickyAux" type="boolean"></element>
+    		<element name="StickyAuxNumber" type="int"></element>
+    	</sequence>
+    </complexType>
+
+
+</schema>
