@@ -124,43 +124,6 @@
 				</executions>
 
 			</plugin>
-			<plugin>
-				<groupId>com.github.searls</groupId>
-				<artifactId>jasmine-maven-plugin</artifactId>
-				<version>1.3.1.6-SNAPSHOT</version>
-				<configuration>
-					<jsSrcDir>${project.basedir}/stsc</jsSrcDir>
-					<jsTestSrcDir>${project.basedir}/stsc/spec</jsTestSrcDir>
-					<!-- <srcDirectoryName>/stsc</srcDirectoryName> -->
-					<specDirectoryName>/stsc/spec</specDirectoryName>
-					<!-- > <specIncludes> <include>**/lib/*.js</include> <include>**/*Spec.js</include> 
-						<include>**/*Spec.coffee</include> </specIncludes> -->
-					<preloadSources>
-						<source>/lib/sockjs-0.3.4.js</source>
-						<source>/lib/easeljs-0.7.1.min.js</source>
-						<source>/lib/preloadjs-0.4.1.min.js</source>
-						<source>/lib/jquery-2.0.3.js</source>
-						<source>/lib/underscore.js</source>
-						<source>/lib/jquery-ui-1.10.3.custom.js</source>
-						<source>/lib/backbone.js</source>
-						<source>/steal/steal.js?stsc/tests.js</source>
-					</preloadSources>
-					<additionalContexts>
-						<context>
-							<contextRoot>/steal</contextRoot>
-							<directory>${project.basedir}/steal</directory>
-						</context>
-						<context>
-							<contextRoot>/lib</contextRoot>
-							<directory>${project.basedir}/lib</directory>
-						</context>
-						<context>
-							<contextRoot>/stsc</contextRoot>
-							<directory>${project.basedir}/stsc</directory>
-						</context>
-					</additionalContexts>
-				</configuration>
-			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
