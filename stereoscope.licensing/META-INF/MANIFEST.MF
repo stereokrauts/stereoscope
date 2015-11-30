@@ -9,6 +9,5 @@ Import-Package: com.stereokrauts.lib.commons,
  com.stereokrauts.lib.logging,
  org.hamcrest;resolution:=optional,
  org.junit;resolution:=optional,
- serialnumberchecker,
  stereokrauts.junit.util;resolution:=optional
 Export-Package: stereoscope.licensing
