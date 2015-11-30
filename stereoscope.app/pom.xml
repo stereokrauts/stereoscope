@@ -14,7 +14,7 @@
 	</scm>
 
 	<properties>
-		<tycho-version>0.21.0</tycho-version>
+		<tycho-version>0.25.0</tycho-version>
 		<aspectj.version>1.7.3</aspectj.version>
 		<compiler.version>1.7</compiler.version>
 		<compiler.target.version>1.7</compiler.target.version>
