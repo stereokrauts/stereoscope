@@ -72,6 +72,5 @@ Import-Package: aspects.observer,
  org.springframework.core.env;version="3.1.1.RELEASE",
  org.springframework.core.io.support;version="3.1.1.RELEASE",
  oscP5,
- serialnumberchecker,
  stereoscope.licensing
 Bundle-ActivationPolicy: lazy
