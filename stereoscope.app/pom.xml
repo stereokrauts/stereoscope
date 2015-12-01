@@ -8,11 +8,6 @@
 	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<scm>
-		<connection>scm:git:https://development.stereokrauts.com/fisheye/git/devel-stereoscope.git</connection>
-		<url>https://development.stereokrauts.com/fisheye/changelog/devel-stereoscope</url>
-	</scm>
-
 	<properties>
 		<tycho-version>0.24.0</tycho-version>
 		<aspectj.version>1.7.3</aspectj.version>
@@ -29,9 +24,9 @@
 			<url>http://download.eclipse.org/tools/ajdt/43/update</url>
 		</repository>
 		<repository>
-			<id>eclipse-luna</id>
+			<id>eclipse-mars</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/luna</url>
+			<url>http://download.eclipse.org/releases/mars</url>
 		</repository>
 		<repository>
 			<id>swtbot</id>
