@@ -1,9 +1,9 @@
-env:
-- JAVA_HOME=$(/usr/libexec/java_home)
-- MAVEN_OPTS="-Xmx2G"
-
 language: java
 os: osx
+
+env:
+  - JAVA_HOME=$(/usr/libexec/java_home)
+  - MAVEN_OPTS="-Xmx2G"
 
 cache:
   directories:
