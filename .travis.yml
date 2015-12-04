@@ -4,7 +4,8 @@ os: osx
 env:
   global:
   - JAVA_HOME=$(/usr/libexec/java_home)
-  - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=128m"
+  - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=512m"
+
 cache:
   directories:
     - $HOME/.m2
