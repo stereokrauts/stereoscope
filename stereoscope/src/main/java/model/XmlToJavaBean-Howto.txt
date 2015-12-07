@@ -1,0 +1,3 @@
+Run the following command:
+
+C:\workspace\OSCremote\src\model>scomp -src .. -out ..\..\lib\myXmlSchema.jar -compiler "c:\Program Files\Java\jdk1.6.0_20\bin\javac" MixerSurfaceDocumentSchema.xsd config.xsdconfig

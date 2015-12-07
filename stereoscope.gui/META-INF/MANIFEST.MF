@@ -61,7 +61,6 @@ Import-Package: aspects.observer,
  org.eclipse.ui.forms.widgets,
  org.eclipse.ui.plugin,
  org.osgi.framework,
- serialnumberchecker,
  stereoscope.licensing
 Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.views.log

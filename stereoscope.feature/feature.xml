@@ -42,7 +42,6 @@
       <import plugin="org.springframework.beans"/>
       <import plugin="org.springframework.context"/>
       <import plugin="org.springframework.core"/>
-      <import plugin="licensing"/>
       <import plugin="lib.binary"/>
       <import plugin="stereoscope.mixer.yamaha.common"/>
       <import plugin="stereoscope.mixer.yamaha.genericmidsize"/>
@@ -99,6 +98,7 @@
       <import plugin="org.aspectj.runtime" version="1.7.3" match="greaterOrEqual"/>
       <import plugin="org.apache.commons"/>
       <import plugin="org.eclipse.osgi" version="3.2.0" match="compatible"/>
+      <import plugin="org.eclipse.equinox.p2.director"/>
    </requires>
 
    <plugin
@@ -314,13 +314,6 @@
          download-size="0"
          install-size="0"
          version="1.0.0"/>
-
-   <plugin
-         id="licensing"
-         download-size="0"
-         install-size="0"
-         version="3.0.0.qualifier"
-         unpack="false"/>
 
    <plugin
          id="oscp5"

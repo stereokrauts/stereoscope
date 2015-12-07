@@ -21,30 +21,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>buildnumber-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>initialize</phase>
-						<goals>
-							<goal>create</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-				<!-- 
-					<nonFilteredFileExtensions>
-        				<nonFilteredFileExtension>ico</nonFilteredFileExtension>
-        				<nonFilteredFileExtension>xpm</nonFilteredFileExtension>
-      				</nonFilteredFileExtensions>
-      				-->
-					<doCheck>false</doCheck>
-					<doUpdate>false</doUpdate>
-					<!-- <timestampFormat>{0, date, yyyy-MM-dd HH:mm:ss}</timestampFormat> -->
-					<shortRevisionLength>6</shortRevisionLength>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-director-plugin</artifactId>
 				<version>${tycho-version}</version>
@@ -66,7 +42,7 @@
 					<products>
 						<product>
 							<id>com.stereokrauts.stereoscope</id>
-							<archiveFileName>stereoscope-${project.version}-${buildNumber}</archiveFileName>
+							<archiveFileName>stereoscope-${project.version}</archiveFileName>
 						</product>
 					</products>
 					<formats>

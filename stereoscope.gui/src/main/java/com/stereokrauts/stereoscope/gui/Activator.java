@@ -4,6 +4,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 import com.stereokrauts.lib.logging.StereoscopeLogManager;
+
 import com.stereokrauts.stereoscope.gui.log.EclipseLoggingAdapter;
 
 /**
