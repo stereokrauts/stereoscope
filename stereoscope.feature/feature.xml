@@ -98,6 +98,7 @@
       <import plugin="org.aspectj.runtime" version="1.7.3" match="greaterOrEqual"/>
       <import plugin="org.apache.commons"/>
       <import plugin="org.eclipse.osgi" version="3.2.0" match="compatible"/>
+      <import plugin="org.eclipse.equinox.p2.director"/>
    </requires>
 
    <plugin
