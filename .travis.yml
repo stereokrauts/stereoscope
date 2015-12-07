@@ -1,27 +1,26 @@
-language: java
-os: osx
-
 script:
-- echo "MAVEN_OPTS='-Xmx2G -XX:MaxPermSize=512m'" > ~/.mavenrc
-
+  - echo "MAVEN_OPTS='-Xmx2G -XX:MaxPermSize=512m'" > ~/.mavenrc
 env:
   global:
-  - JAVA_HOME=$(/usr/libexec/java_home)
-  - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=512m"
-
+    - JAVA_HOME=$(/usr/libexec/java_home)
+    - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=512m"
 cache:
   directories:
     - $HOME/.m2
-
+language: java
+os: osx
+script:
+  - ls stereoscope.repository/target/products/
 deploy:
   provider: releases
   api_key:
     secure: QY7nT45p2+DW6ZmzLlTrDRe714mL9nL56Twk50GQMBxD7zb2yIPpuwryJXcvT7WtBLy9tBcgGTEYoG7hr93VlPqWepYnP475cEkfRPhECWZAY1ITJnROIyUVfUfUm9OQWBJYOvBvctYvtLOxf6bqfMQyKL2QNe+aFohwpCnDDdksjKbkEEtS4V2D5Sy80VlQDVwhugxbG3hDn+pL0HFiRl7LfzOwOzWK247I3+ovkR/h+65jI9vfkEZxgJ1c0yRkpZqR7ct1+PhfMRTqHige3rY4NKfEzxEVAtGaXkuO45JMHJpGaAUkmLEtKZ7cJEj0Q887y2QLEE2elLeda4/k0+ccLiG5XdhJ4MtYOlIpB4+0dWAm/O3R98/Q+68QKptzBRLFz3q9fSSXE55zxozKpEQW8/2fzos9Xl/OR12duWTqX5wdXjiOJRZ81OwUVH3KP+fDqGiWIMfW/DvtNbYYjt0FwhHeN+gwzuSTv3EveC52rf6q+aoOeyl9RGQebFJ5CjS6zdB29aIDNVI4oablmHGFVHzZvmbiotd9wDqHK04jtSu0sBUbHEhqac+VLu9k3yjcb8Gw2ga85r7fIXvK2rAH6B+HirjCZrBws+QJdc6O3nWdquAeSl/yRmAQN59MUzSyZFHTnWfMuRMhRv2e6DydqxMhKF8imoObJ1TASyU=
+  file_glob: true
   file:
-    - stereoscope.repository/target/products/stereoscope-3.0.0-SNAPSHOT-linux.gtk.x86.tar.gz
-    - stereoscope.repository/target/products/stereoscope-3.0.0-SNAPSHOT-linux.gtk.x86_64.tar.gz
-    - stereoscope.repository/target/products/stereoscope-3.0.0-SNAPSHOT-macosx.cocoa.x86_64.tar.gz
-    - stereoscope.repository/target/products/stereoscope-3.0.0-SNAPSHOT-win32.win32.x86.zip
+    - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86.tar.gz
+    - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86_64.tar.gz
+    - stereoscope.repository/target/products/stereoscope-*-macosx.cocoa.x86_64.tar.gz
+    - stereoscope.repository/target/products/stereoscope-*-win32.win32.x86.zip
   on:
     repo: stereokrauts/stereoscope
     tags: true
