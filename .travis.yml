@@ -1,27 +1,28 @@
 script:
-  - echo "MAVEN_OPTS='-Xmx2G -XX:MaxPermSize=512m'" > ~/.mavenrc
+- ls stereoscope.repository/target/products/
 env:
   global:
-    - JAVA_HOME=$(/usr/libexec/java_home)
-    - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=512m"
+  - JAVA_HOME=$(/usr/libexec/java_home)
+  - MAVEN_OPTS="-Xmx2G -XX:MaxPermSize=512m"
 cache:
   directories:
-    - $HOME/.m2
+  - "$HOME/.m2"
 language: java
 os: osx
-script:
-  - ls stereoscope.repository/target/products/
 deploy:
   provider: releases
   api_key:
     secure: QY7nT45p2+DW6ZmzLlTrDRe714mL9nL56Twk50GQMBxD7zb2yIPpuwryJXcvT7WtBLy9tBcgGTEYoG7hr93VlPqWepYnP475cEkfRPhECWZAY1ITJnROIyUVfUfUm9OQWBJYOvBvctYvtLOxf6bqfMQyKL2QNe+aFohwpCnDDdksjKbkEEtS4V2D5Sy80VlQDVwhugxbG3hDn+pL0HFiRl7LfzOwOzWK247I3+ovkR/h+65jI9vfkEZxgJ1c0yRkpZqR7ct1+PhfMRTqHige3rY4NKfEzxEVAtGaXkuO45JMHJpGaAUkmLEtKZ7cJEj0Q887y2QLEE2elLeda4/k0+ccLiG5XdhJ4MtYOlIpB4+0dWAm/O3R98/Q+68QKptzBRLFz3q9fSSXE55zxozKpEQW8/2fzos9Xl/OR12duWTqX5wdXjiOJRZ81OwUVH3KP+fDqGiWIMfW/DvtNbYYjt0FwhHeN+gwzuSTv3EveC52rf6q+aoOeyl9RGQebFJ5CjS6zdB29aIDNVI4oablmHGFVHzZvmbiotd9wDqHK04jtSu0sBUbHEhqac+VLu9k3yjcb8Gw2ga85r7fIXvK2rAH6B+HirjCZrBws+QJdc6O3nWdquAeSl/yRmAQN59MUzSyZFHTnWfMuRMhRv2e6DydqxMhKF8imoObJ1TASyU=
   file_glob: true
   file:
-    - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86.tar.gz
-    - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86_64.tar.gz
-    - stereoscope.repository/target/products/stereoscope-*-macosx.cocoa.x86_64.tar.gz
-    - stereoscope.repository/target/products/stereoscope-*-win32.win32.x86.zip
+  - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86.tar.gz
+  - stereoscope.repository/target/products/stereoscope-*-linux.gtk.x86_64.tar.gz
+  - stereoscope.repository/target/products/stereoscope-*-macosx.cocoa.x86_64.tar.gz
+  - stereoscope.repository/target/products/stereoscope-*-win32.win32.x86.zip
   on:
     repo: stereokrauts/stereoscope
     tags: true
     all_branches: true
+notifications:
+  slack:
+    secure: KislSc2YbR4ejkUpKYOiftO3QhH2t91Izzyb1M0QMMh94OOcFLnWx0JKT6Or38lFE3UGODTHpI7Z87AYEbElioxMvaBSEmYjkhhFy12g93IPOynShtgoGZc5QdYg1nVIVF4SWy30MjmTa3kWr8OMMzZX/KcqQwQQAb4ksZBoSgn6qmEvbAqNwSSOlalfIXYJ6X1cFETPaQ2wpr/B/kTFx5jjjGlkMMm8EAajpsJ15rJh0S5wSRu07s4PEHqTK+adSozc/NwU14oJekpqi4bbVSHDwQOO8Be5fXsgIl+K67B0LDvo7adSZb9i0tLO8tiy3cd2vUUGLosktB4Rkd4fWzYgROWEMnTiiXTRvFBT3GBscWFv4cpKpJeEmRJEX5SW+6KUXxCbo+e8H8O9Pr0R3KeKoITfLrezrfiBMDHORerP6f8g+v/L0sVCTFNw8HVWFuSNX/uhMw9NgzMPtU5xih3r2JnQTjmbojfaRky4X8NM6pK8CiqBMznH1QKDfHmFigw1Bdd/+26QqE5VkANzz35xhDKGfuMYF/HGxv0NtIEbNNAgwrDKhwA2lQrPOVUzKLL6IHGpiv3BEtFVjrsKxBCjiVLR0PaspZWXnZU8x2C1Rp49BjRX0EZ6o8dv+Y/O3ljmei4fgNhnERTH14XHmiDi2k2FMVwOupPLJrkCCOU=
