@@ -1,5 +1,3 @@
-language: java
-os: osx
 script:
   - echo "MAVEN_OPTS='-Xmx2G -XX:MaxPermSize=512m'" > ~/.mavenrc
 env:
@@ -9,8 +7,10 @@ env:
 cache:
   directories:
     - $HOME/.m2
+language: java
+os: osx
 script:
-  - ls -R stereoscope.repository/target/
+  - ls stereoscope.repository/target/products/
 deploy:
   provider: releases
   api_key:
