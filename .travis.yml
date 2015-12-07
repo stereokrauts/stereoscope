@@ -1,3 +1,5 @@
+notifications:
+  email: false
 script:
 - ls stereoscope.repository/target/products/
 env:
